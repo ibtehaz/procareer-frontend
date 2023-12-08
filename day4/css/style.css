@@ -1,0 +1,38 @@
+h1,h2,h3,h4,h5,h6 {
+   
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+h3{
+    border-top: olive 4px groove;
+    border-bottom: red 4px ridge;
+    border-left: blue 4px solid;
+    border-right: green 4px double;
+}
+
+
+ul > li {
+   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+li {
+   
+    font-family:'Times New Roman', Times, serif
+}
+.ulitem {
+   
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#uli2 {
+    color:red;
+}
+
+
+body {
+    background: url(../img/image.jpg) repeat fixed bottom;
+}

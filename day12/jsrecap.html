@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Recap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <script>
+        function fun() {
+            alert("Hello World");
+        }
+
+        function fun2() {
+            alert("Hello World 2");
+        }
+
+        function fun2() {
+            let x = document.getElementById("funtoo");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none"
+            }
+           
+        }
+
+        function fun3() {
+            
+            let x = document.getElementById("funtoo");
+            x.style.backgroundColor = "red";
+        }
+
+        function changeText() {
+            document.getElementById('change').textContent = 'Yoyoyoyo'
+        }
+
+        function fun4() {
+            document.getElementById('boldit').style.fontWeight = 'bold'
+        }
+
+        function foo() {
+            let x = document.getElementById("showhide")
+            if (x.style.display == 'none') {
+                x.style.display = 'block' 
+                bar.textContent = 'Hide'
+            } else {
+                x.style.display = 'none' 
+                bar.textContent = 'Show'
+            }
+
+        }
+
+        function dosomething() {
+            let name = document.getElementById('name').value
+            document.getElementById('changediv2').textContent = 'Hello' + name
+            
+        }
+
+
+
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Welcome to the world of JavaScript</h1>
+        <p id="funtoo">I am a text hide meee</p>
+        <button onclick="fun()">Click me</button>
+        <button onclick="fun2()">Click me to hide/show text</button>
+        <button onclick="fun3()">Change bg</button>
+
+        <h2 id="change">Here is some text and i want to be changed</h2>
+        <button onclick="changeText()">Change text</button>
+
+        <p id="boldit">this text should become bold now</p>
+        <button onclick="fun4()">Make it bold</button>
+
+        <p id="showhide">Do another show hide</p>
+        <button id="bar" onclick="foo()">Hide</button>
+
+        <br><br><br><br><br>
+
+    </div>
+
+    <div>
+        <h5>Please change form below</h5>
+        
+          <label for="name" class="form-label">Name</label>
+          <input type="text"
+            class="form-control" name="name" id="name" aria-describedby="helpId" placeholder="">
+
+        <button type="button" class="btn btn-primary" onclick="dosomething()">Button</button>
+    </div>
+
+    <div id="changediv2" class="bg-info">============</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
