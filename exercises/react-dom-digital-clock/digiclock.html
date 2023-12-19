@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    
+    <div id="regulardiv">
+        REGULAR div - show time
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div id="reactdiv">
+        REACT div - show time 
+    </div>
+
+    <script>
+
+        let regDiv = document.getElementById("regulardiv");
+        let root = ReactDOM.createRoot(document.getElementById("reactdiv"));
+        
+        let renderTime = () => {
+            regDiv.innerHTML = "<div><input> <p>" + new Date() + "</p></div>";
+            let DateComp = React.createElement("div", null, React.createElement("input", null), React.createElement("p", null, new Date().toString()));
+            root.render(DateComp);
+        }
+        setInterval(renderTime, 1000);
+
+    </script>
+</body>
+</html>
