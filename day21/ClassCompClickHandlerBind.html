@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class comp click handler </title>
+</head>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<body>
+    <div id="root"> This should change</div>
+   
+    <script type="text/babel">
+        let myroot = ReactDOM.createRoot(document.getElementById('root'));
+
+
+        class ClassComp extends React.Component{
+           
+            clickHandler = ()=>{
+                console.log('clicked');
+                console.log("name"+this.props.name);
+            }
+
+
+            myClickHandler() {
+                console.log(" clicked");
+                console.log(this);
+                console.log("name"+this.props.name);
+            }
+
+
+            render(){
+
+
+                //  does not require this when calling
+                let clickHandlerInsideRender = () => {
+                    console.log('clicked');
+                }
+               // console.log(this); //will print the class component
+
+
+                return (
+                    <div>
+                        <h1> Hello {this.props.name}!! </h1>
+                        <button onClick={this.myClickHandler.bind(this)}> Click me  Regular function </button>
+                        <button onClick={this.clickHandler}> Click me arrow function</button>
+                        <button onClick={clickHandlerInsideRender}> Click me inside render</button>
+                    </div>
+                )
+            }
+
+
+        }
+
+
+        myroot.render(<ClassComp name="John Doe"/>);
+
+
+    </script>
+</body>
+</html>

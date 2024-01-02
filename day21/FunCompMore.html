@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React with Bootstrap</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="root" class="container my-5">
+        <!-- React will render content here -->
+    </div>
+
+    <script type="text/babel">
+
+        let myroot = ReactDOM.createRoot(document.getElementById("root"));
+
+        let FunCompMore = (props) => {
+            let clickHandler = () => {
+                console.log(props.name)
+                // props.name = "John Cena"; This will throw an error because props are immutable
+                let myname = props.name;
+                myname = "John Cena";
+                console.log(myname);
+            }
+            return (
+                <div>
+                    <h1>Hello {props.name}</h1>
+                    <button onClick={clickHandler}>Click Me</button>
+                </div>
+            )
+        }
+
+        myroot.render(<FunCompMore name="Steve Austin" />)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class comp click handler </title>
+</head>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<body>
+   
+
+
+    <div id="root"> This should change </div>
+
+
+    <script type="text/babel">
+        let myroot = ReactDOM.createRoot(document.getElementById('root'));
+        let useState = React.useState;
+        let FunComp = () => {
+
+
+           let [profile, setProfile] = useState({name: 'John', age: 20, pro:"director"})
+           
+            let clickHandler = () => {
+               setProfile({...profile, name:"Sally"})
+             }
+
+            
+            return(
+                <div>
+                    <h1> Object check </h1>
+                    <h3>Current Profile</h3>
+                    <h3> Name: {profile.name} </h3>
+                    <h3> Age: {profile.age} </h3>
+                    <h3> Pro: {profile.pro} </h3>
+                    <button onClick={clickHandler}> Increment </button>
+   
+                </div>
+            )
+        }
+        myroot.render(<FunComp/>);
+
+
+    </script>
+
+
+
+
+</body>
+</html>

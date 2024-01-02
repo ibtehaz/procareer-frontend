@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class comp click handler </title>
+</head>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<body>
+   
+
+
+    <div id="root"> This should change </div>
+
+
+    <script type="text/babel">
+        let myroot = ReactDOM.createRoot(document.getElementById('root'));
+        let useState = React.useState;
+        let FunComp = () => {
+
+
+           let [counter,setCounter] = useState(0);
+           let [text,setText] = useState('');
+           let [happy,setHappy] = useState(true);
+        
+
+
+
+
+
+            // let counter = 1;
+            let clickHandler = () => {
+                // console.log('clicked');
+                // counter++;
+                counter = counter+1;
+                console.log(counter);
+                setCounter(counter); // setting the variable back to state
+
+
+            }
+            let textHandler = () => {
+                setText(" Procareer");
+            }
+
+
+            let emotionHandler=() => {
+                if(happy) {
+                    console.log("happy!");                    
+                }
+                else{
+                    console.log("not happy");
+                }
+                setHappy(!happy)
+            }
+            return(
+                <div>
+                    <h1> Counter check </h1>
+                    <h3>  {counter} </h3>
+                    <h4> Do you see text? {text} </h4>
+                    <h4> Am I happy ? {happy+''} </h4>
+                    <button onClick={clickHandler}> Increment </button>
+                    <button onClick={textHandler}> Change Text</button>
+                    <button onClick={emotionHandler}> Change Emotion</button>
+                </div>
+            )
+        }
+        myroot.render(<FunComp/>);
+
+
+    </script>
+
+
+
+
+</body>
+</html>

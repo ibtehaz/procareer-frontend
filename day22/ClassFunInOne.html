@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<body>
+   
+<div id="root"> This should change</div>
+
+
+
+
+<script type="text/babel">
+let myroot = ReactDOM.createRoot(document.getElementById('root'));
+
+
+let FunComp = (props) => {
+    return (
+        <div>
+            <h1> Hello {props.name} ! </h1>
+            {
+                props.marks.map((elem,index) => {
+                return <li key={index}> {elem} </li>
+            })
+            }
+           
+        </div>
+    );
+}
+
+
+class ClassComp extends React.Component{
+    render() {
+        return ( <div>
+            <h1> Hello {this.props.name} ! </h1>
+        </div>
+        );
+    }
+}
+
+
+
+
+myroot.render([<FunComp name="Jane" marks={ [92,95,87,92,100] } />,<ClassComp name="jane"/>]);
+</script>
+
+
+
+
+</body>
+</html>

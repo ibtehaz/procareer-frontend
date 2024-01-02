@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "title": "Karate Kid",
+        "imgsrc": "https://upload.wikimedia.org/wikipedia/en/d/d5/Karate_kid_ver2.jpg",
+        "desc": "Karate Kid is a 1984 American martial arts drama film produced by Jerry Weintraub, directed by John G. Avildsen, written by Robert Mark Kamen, in which a martial arts master agrees to teach karate to a bullied teenager. It stars Ralph Macchio, Pat Morita, William Zabka and Elisabeth Shue. It is an underdog story in the mold of a previous success with Rocky (1976), which Avildsen also directed. The film features the Gōjū-ryū, Gōjū Kai style of karate."
+    },
+    {
+        "id": 2,
+        "title": "Star Wars IV",
+        "imgsrc": "https://musicart.xboxlive.com/7/c2255100-0000-0000-0000-000000000002/504/image.jpg?w=1920&h=1080",
+        "desc": "Star Wars IV is a 1977 American epic space opera film written and directed by George Lucas, produced by Lucasfilm and distributed by 20th Century Fox. It stars Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing, Alec Guinness, David Prowse, James Earl Jones, Anthony Daniels, Kenny Baker and Peter Mayhew. It is the first installment in the original Star Wars trilogy, the first film to be produced in the Star Wars franchise, and the fourth episode of the Skywalker saga. It was followed by The Empire Strikes Back (1980) and Return of the Jedi (1983) in the first trilogy, and The Phantom Menace (1999), Attack of the Clones (2002) and Revenge of the Sith (2005) in the prequel trilogy."
+    }
+
+]
