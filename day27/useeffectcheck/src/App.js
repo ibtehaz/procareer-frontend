@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import MyCards from './components/MyCards';
+import UseEffectCheck from './UseEffectCheck';
+
 
 function App() {
   return (
-    <div>
-      <h1>hello</h1>
-      <MyCards />
+    <div className="App">
+      <UseEffectCheck />
     </div>
   );
 }

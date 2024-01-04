@@ -1,12 +1,20 @@
 import data from '../data.json';
+import IDcard from './IDcard';
 
 const MyCards = () => {
+   const {data: mydata} = data;
+
     return (
         <div>
-            <h1>My Cards</h1>
-            {console.log({...data})}
-            {console.log({data})}
-        </div>
+            <h4>Cards Here</h4>
+            {
+            mydata.map((val) => {
+                return (
+                    <IDcard key={val.id} name={val.name} state={val.des} age={val.age} />
+                )
+            })}
+       </div>
+        
     );
 };
 
