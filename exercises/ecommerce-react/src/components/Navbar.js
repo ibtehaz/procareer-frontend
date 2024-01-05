@@ -19,10 +19,10 @@ const Navbar = () => {
                   <NavLink className="nav-link" to="/about"><i className="fas fa-user"></i> About</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="products.html"><i className="fas fa-box-open"></i> Products</NavLink>
+                  <NavLink className="nav-link" to="/products"><i className="fas fa-box-open"></i> Products</NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="contactus.html"><i className="fas fa-envelope"></i> Contact</NavLink>
+                  <NavLink className="nav-link" to="/contact"><i className="fas fa-envelope"></i> Contact</NavLink>
                 </li>
               </ul>
               <button className="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#loginModal">
