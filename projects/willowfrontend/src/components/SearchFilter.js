@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom"
 
 const SearchFilter = (props) => {
+    let navigate = useNavigate()
 
     //get distinct counties
     let arrWithDupeCounties = props.allHouses.map((house) => {
@@ -11,11 +12,15 @@ const SearchFilter = (props) => {
 
     const uniqueCounties = Array.from(new Set(arrWithDupeCounties))
 
-    let changeHandler = (e) => {
-        console.log(e)
-        console.log("changed" + e.target.value)
+    const changeHandler = (e) => {
 
         //navigate to search results component
+        // let navigate = useNavigate() //cant do this, 
+        // hooks must be intialized top level not within handler
+        
+       let countyName = e.target.value
+        navigate(`/searchresults/${countyName}`)
+      
        
     }
 

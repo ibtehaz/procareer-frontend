@@ -1,6 +1,8 @@
 
 const House = (props) => {
 
+    
+
 
     if(!props.houseInfo) {
         return <h1>loading...</h1>
